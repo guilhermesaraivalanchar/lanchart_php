@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
+    <title>Totem</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-grid.min.css" rel="stylesheet">
+    <link href="css/bootstrap-reboot.min.css" rel="stylesheet">
+    <link href="css/prism.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- You can change the theme colors from here -->
+    <link href="css/blue.css" id="theme" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body style="background-image:url(imagens/fundo.jpg); border: solid; border-width: 1px; border-color: #fc8311; overflow: hidden; height: 480px; width: 640px;">
+  <div style="height: 50px; background-color: white">
+    <table style="border-spacing: 15px;border-collapse: separate;">
+      <tr>
+        <td>
+          <div style="width: 200px; height: 40px; text-align: center;">Favoritos</div>
+        </td>
+        <td>
+          <div style="width: 200px; height: 40px; text-align: center;">Produtos</div>
+        </td>
+        <td>
+          <div style="width: 200px; height: 40px; text-align: center;">Combos</div>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div style="padding: 0px 20px 20px 20px; overflow-y: scroll; max-height: 440px;" >
+    <div class="card">
+        <div class="card-body">
+            <div class="d-flex no-block">
+                <h4 class="card-title">Projects of the Month</h4>
+                <div class="ml-auto">
+                    <select class="custom-select">
+                        <option selected="">January</option>
+                        <option value="1">February</option>
+                        <option value="2">March</option>
+                        <option value="3">April</option>
+                    </select>
+                </div>
+            </div>
+            <div class="table-responsive m-t-20">
+                <table class="table stylish-table">
+                    <thead>
+                        <tr>
+                            <th colspan="2">Assigned</th>
+                            <th>Name</th>
+                            <th>Priority</th>
+                            <th>Budget</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="https://img.cybercook.uol.com.br/receitas/18/pao-de-queijo-5.jpeg?w=583&h=350&fit=max" alt="user" height="120" width="120"></td>
+                            <td>
+                                <h6>Sunil Joshi</h6><small class="text-muted">Web Designer</small></td>
+                            <td>Elite Admin</td>
+                            <td><span class="label label-success">Low</span></td>
+                            <td>$3.9K</td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://img.cybercook.uol.com.br/receitas/18/pao-de-queijo-5.jpeg?w=583&h=350&fit=max" alt="user" height="120" width="120"></td>
+                            <td>
+                                <h6>Andrew</h6><small class="text-muted">Project Manager</small></td>
+                            <td>Real Homes</td>
+                            <td><span class="label label-info">Medium</span></td>
+                            <td>$23.9K</td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://img.cybercook.uol.com.br/receitas/18/pao-de-queijo-5.jpeg?w=583&h=350&fit=max" alt="user" height="120" width="120"></td>
+                            <td>
+                                <h6>Bhavesh patel</h6><small class="text-muted">Developer</small></td>
+                            <td>MedicalPro Theme</td>
+                            <td><span class="label label-primary">High</span></td>
+                            <td>$12.9K</td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://img.cybercook.uol.com.br/receitas/18/pao-de-queijo-5.jpeg?w=583&h=350&fit=max" alt="user" height="120" width="120"></td>
+                            <td>
+                                <h6>Nirav Joshi</h6><small class="text-muted">Frontend Eng</small></td>
+                            <td>Elite Admin</td>
+                            <td><span class="label label-danger">Low</span></td>
+                            <td>$10.9K</td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://img.cybercook.uol.com.br/receitas/18/pao-de-queijo-5.jpeg?w=583&h=350&fit=max" alt="user" height="120" width="120"></td>
+                            <td>
+                                <h6>Micheal Doe</h6><small class="text-muted">Content Writer</small></td>
+                            <td>Helping Hands</td>
+                            <td><span class="label label-warning">High</span></td>
+                            <td>$12.9K</td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://img.cybercook.uol.com.br/receitas/18/pao-de-queijo-5.jpeg?w=583&h=350&fit=max" alt="user" height="120" width="120"></td>
+                            <td>
+                                <h6>Johnathan</h6><small class="text-muted">Graphic</small></td>
+                            <td>Digital Agency</td>
+                            <td><span class="label label-info">High</span></td>
+                            <td>$2.6K</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+  </div>
+  <!-- ============================================================== -->
+  <!-- End Wrapper -->
+  <!-- ============================================================== -->
+  <!-- ===================================  =========================== -->
+  <!-- All Jquery -->
+  <!-- ============================================================== -->
+  <script src="js/jquery.min.js"></script>
+  <!-- Bootstrap tether Core JavaScript -->
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <!-- slimscrollbar scrollbar JavaScript -->
+  <script src="js/jquery.slimscroll.js"></script>
+  <!--Wave Effects -->
+  <script src="js/waves.js"></script>
+  <!--Menu sidebar -->
+  <script src="js/sidebarmenu.js"></script>
+  <!--stickey kit -->
+  <script src="js/sticky-kit.min.js"></script>
+  <script src="js/jquery.sparkline.min.js"></script>
+  <!--Custom JavaScript -->
+  <script src="js/custom.min.js"></script>
+  <!-- ============================================================== -->
+  <!-- Style switcher -->
+  <!-- ============================================================== -->
+  <script src="js/jQuery.style.switcher.js"></script>
+  
+
+  <script type="text/javascript">
+
+    var totem_token = "HD25512FVJEJHZX2558VGBKJE45"
+    var e_id = 1
+    var server = "http://localhost:3000"
+    $.getJSON(server+"/totem/g_p", { e: e_id, t: totem_token },function(d) {
+      console.log(d)
+    })
+    $("#log_in").click(function(){
+      $.post(server+"/totem/login",
+      {
+        c: $("#user_codigo").val(),
+        p: $("#user_pass").val(),
+        e: e_id,
+        t: totem_token
+      },
+      function(data, status){
+        console.log(data)
+        console.log(status)
+
+        if (data.status == "200"){
+          prod_init(data.p, data.c)
+          $("#card_login").hide()
+          $("#card_produtos").show()
+        }
+      });
+    })
+    function prod_init(produtos_all_string, combos_all_string){
+
+      produtos_all = []
+      produtos_all_preco = []
+      produtos_all_quantidade = []
+
+      produtos = []
+
+      prod_card = produtos_all_string.split("...")
+
+      for(i in prod_card){
+        prod_dados = prod_card[i].split("::")
+        produtos_all[prod_dados[1]] = prod_dados[0]
+        produtos_all_preco[prod_dados[1]] = parseFloat(prod_dados[2])
+        produtos_all_quantidade[prod_dados[1]] = parseFloat(prod_dados[3])
+        if (prod_dados[1] != undefined){
+          produtos.push({id: prod_dados[1], nome: prod_dados[0], preco: parseFloat(prod_dados[2]), quantidade: parseFloat(prod_dados[3])})
+        }
+      }
+
+      combos_all = []
+      combos_all_preco = []
+
+      combos = []
+
+      comb_card = combos_all_string.split("...")
+
+      for(i in comb_card){
+        comb_dados = comb_card[i].split("::")
+        combos_all[comb_dados[1]] = comb_dados[0]
+        combos_all_preco[comb_dados[1]] = parseFloat(comb_dados[2])
+        if (comb_dados[1] != undefined){
+          combos.push({id: comb_dados[1], nome: comb_dados[0], preco: parseFloat(comb_dados[2])})
+        }
+      }
+
+      console.log(produtos)
+      console.log(combos)
+
+
+    }
+
+    function replaceAll(str, find, replace) {
+      return str.replace(new RegExp(find, 'g'), replace);
+    }
+
+  </script>
+</body>
+
+</html> 
