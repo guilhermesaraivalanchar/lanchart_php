@@ -106,10 +106,11 @@
   <div id="div_carrinho" class="card" style="max-height: 430px; overflow-y: scroll; width: 600px;position: fixed; top: 50px; left: 20px; background-color: white; padding: 5px; display:none;">
     <div style="font-size: 19px;">
 
-      <span style="font-size: 48px;">
+      Lista de Compras 
+
+      <span onclick="fechar_lista()" style="font-size: 48px;">
         <i class="fas fa-times"></i>
       </span>
-      Lista de Compras 
     </div>
     <div>
       <ul id="lista_produtos" class="b" style="padding: 20px">
@@ -178,14 +179,15 @@
         <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
       </ul>
     </div>
-    <div style="font-size: 17px;">
+    <div id="div_total_lista" style="font-size: 17px;">
       Total (R$ 20,00)
     </div>
+    <div>
+      <button type='button' class='btn btn-sm waves-effect waves-light btn-success' onclick='finalizar_compra()'>Comprar</button>
+    </div>  
+
     <br>
     <br>  
-    <div style="position: fixed; bottom: 0px;font-size: 20px;">
-      Saldo (R$ 20,00)
-    </div>
     
     
   </div>
@@ -249,6 +251,11 @@
         }
       });
     })
+
+
+    function fechar_lista() {
+      $("#div_carrinho").hide()
+    }
 
 
     function prod_init(produtos_all_string, combos_all_string){
@@ -340,12 +347,28 @@
 
 
       lista_string = ""
+      total_lista = 0
       for(i in lista){
-        lista_string = lista_string + "<li>"+lista[i].produto_nome+" ("+lista[i].quantidade+")<br><span class='label label-danger'>Remover</span></li> "
+        total_lista = total_lista + (lista[i].preco * lista[i].quantidade)
+        lista_string = lista_string + "<li>"+lista[i].produto_nome+" ("+lista[i].quantidade+") <span class='label label-danger' onclick='remover_produto_lista("+lista[i].produto_id+")'>Remover</span></li> "
       }
       $("#lista_produtos").html(lista_string)
-      $("#contador_carrinho").html("Carrinho ("+lista.length+") <button type='button' class='btn btn-sm waves-effect waves-light btn-danger' onclick='mostrar_lista_compras()'>Comprar</button>")
-          
+      $("#contador_carrinho").html("Carrinho ("+lista.length+") <button type='button' class='btn btn-sm waves-effect waves-light btn-danger' onclick='mostrar_lista_compras()'>Confirmar</button>")
+      $("#div_total_lista").html("Total (R$ "+total_lista+" )")
+    }
+
+    function remover_produto_lista(produto_id) {
+      console.log("ENTRO")
+      for(i in lista){
+        if(lista[i].produto_id == produto_id){
+          if (lista[i].quantidade > 1){
+            lista[i].quantidade = lista[i].quantidade - 1 
+          }else{
+            lista.splice(i, 1)
+          }
+        }
+      }
+      listar_produtos()
     }
 
     function mostrar_lista_compras(){
@@ -364,7 +387,7 @@
         }
       }
       if (add_novo){
-        lista.push({produto_id: produto_id, produto_nome: produtos_all[produto_id], quantidade: 1})
+        lista.push({produto_id: produto_id, produto_nome: produtos_all[produto_id], quantidade: 1, preco: produtos_all_preco[produto_id]})
         
       }
 
