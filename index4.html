@@ -38,6 +38,17 @@
     display: none; 
   }
 
+  #card_combos_scroll::-webkit-scrollbar { 
+    display: none; 
+  }
+
+  #card_combo_scroll::-webkit-scrollbar { 
+    display: none; 
+  }
+
+  #card_tipo_produto_scroll::-webkit-scrollbar { 
+    display: none; 
+  }
 </style>
 </head>
 
@@ -81,13 +92,13 @@
       <table style="border-spacing: 15px;border-collapse: separate;width: 640px;">
         <tr>
           <td>
-            <div style="height: 40px; text-align: center;">Favoritos</div>
+            <div id="menu_favoritos" style="height: 40px; text-align: center;">Favoritos</div>
           </td>
           <td>
-            <div style="height: 40px; text-align: center;">Produtos</div>
+            <div id="menu_produtos" style="height: 40px; text-align: center;">Produtos</div>
           </td>
           <td>
-            <div style="height: 40px; text-align: center;">Combos</div>
+            <div id="menu_combos" style="height: 40px; text-align: center;">Combos</div>
           </td>
           <td>
             <div id="contador_carrinho" style="height: 40px; text-align: center;">Carrinho (0)</div>
@@ -100,7 +111,95 @@
        
       </table>
     </div>
+    <div id="card_combos_scroll" style="padding: 0px 20px 20px 20px; overflow-y: scroll; max-height: 440px;" >
+      <table id="table_combos" style="border-spacing: 15px; border-collapse: separate; padding-left: 15px">
+       
+      </table>
+    </div>
+
+    <div id="card_combo_scroll" class="card" style="display:none;">
+        <div class="card-body">
+            <h4 class="card-title">Browser Stats</h4>
+            <table class="table browser m-t-30 no-border">
+                <tbody>
+                    <tr>
+                        <td style="width:40px"><img src="../assets/images/browser/chrome-logo.png" alt="logo"></td>
+                        <td>Google Chrome</td>
+                        <td align="right"><span class="label label-light-info">23%</span></td>
+                    </tr>
+                    <tr>
+                        <td><img src="../assets/images/browser/firefox-logo.png" alt="logo"></td>
+                        <td>Mozila Firefox</td>
+                        <td align="right"><span class="label label-light-success">15%</span></td>
+                    </tr>
+                    <tr>
+                        <td><img src="../assets/images/browser/safari-logo.png" alt="logo"></td>
+                        <td>Apple Safari</td>
+                        <td align="right"><span class="label label-light-primary">07%</span></td>
+                    </tr>
+                    <tr>
+                        <td><img src="../assets/images/browser/internet-logo.png" alt="logo"></td>
+                        <td>Internet Explorer</td>
+                        <td align="right"><span class="label label-light-warning">09%</span></td>
+                    </tr>
+                    <tr>
+                        <td><img src="../assets/images/browser/opera-logo.png" alt="logo"></td>
+                        <td>Opera mini</td>
+                        <td align="right"><span class="label label-light-danger">23%</span></td>
+                    </tr>
+                    <tr>
+                        <td><img src="../assets/images/browser/internet-logo.png" alt="logo"></td>
+                        <td>Microsoft edge</td>
+                        <td align="right"><span class="label label-light-megna">09%</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <div id="card_tipo_produto_scroll" class="card" style="display:none;">
+        <div class="card-body">
+            <h4 class="card-title">Browser Stats</h4>
+            <table class="table browser m-t-30 no-border">
+                <tbody>
+                    <tr>
+                        <td style="width:40px"><img src="../assets/images/browser/chrome-logo.png" alt="logo"></td>
+                        <td>Google Chrome</td>
+                        <td align="right"><span class="label label-light-info">23%</span></td>
+                    </tr>
+                    <tr>
+                        <td><img src="../assets/images/browser/firefox-logo.png" alt="logo"></td>
+                        <td>Mozila Firefox</td>
+                        <td align="right"><span class="label label-light-success">15%</span></td>
+                    </tr>
+                    <tr>
+                        <td><img src="../assets/images/browser/safari-logo.png" alt="logo"></td>
+                        <td>Apple Safari</td>
+                        <td align="right"><span class="label label-light-primary">07%</span></td>
+                    </tr>
+                    <tr>
+                        <td><img src="../assets/images/browser/internet-logo.png" alt="logo"></td>
+                        <td>Internet Explorer</td>
+                        <td align="right"><span class="label label-light-warning">09%</span></td>
+                    </tr>
+                    <tr>
+                        <td><img src="../assets/images/browser/opera-logo.png" alt="logo"></td>
+                        <td>Opera mini</td>
+                        <td align="right"><span class="label label-light-danger">23%</span></td>
+                    </tr>
+                    <tr>
+                        <td><img src="../assets/images/browser/internet-logo.png" alt="logo"></td>
+                        <td>Microsoft edge</td>
+                        <td align="right"><span class="label label-light-megna">09%</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
   </div>
+
 
 
   <div id="div_carrinho" class="card" style="max-height: 430px; overflow-y: scroll; width: 600px;position: fixed; top: 50px; left: 20px; background-color: white; padding: 5px; display:none;">
@@ -114,69 +213,7 @@
     </div>
     <div>
       <ul id="lista_produtos" class="b" style="padding: 20px">
-        <li>Pao de queijo<br><span class="label label-danger">Remover</span></li>
-        <li>Coca Cola<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
-        <li>Achocolatado<br><span class="label label-danger">Remover</span></li>
+
       </ul>
     </div>
     <div id="div_total_lista" style="font-size: 17px;">
@@ -225,12 +262,14 @@
 
   <script type="text/javascript">
 
+    var combo = 0
+
     var totem_token = "HD25512FVJEJHZX2558VGBKJE45"
     var e_id = 1
     var server = "http://localhost:3000"
     lista = []
     $.getJSON(server+"/totem/g_p", { e: e_id, t: totem_token },function(d) {
-      console.log(d)
+      //console.log(d)
     })
     $("#log_in").click(function(){
       $.post(server+"/totem/login",
@@ -248,6 +287,7 @@
           prod_init(data.p, data.c)
           $("#card_login").hide()
           $("#card_produtos").show()
+          $("#card_combos").show()
         }
       });
     })
@@ -263,7 +303,7 @@
       produtos_all = []
       produtos_all_preco = []
       produtos_all_quantidade = []
-
+      produtos_all_url = []
       produtos = []
 
       prod_card = produtos_all_string.split("...")
@@ -273,6 +313,7 @@
         produtos_all[prod_dados[1]] = prod_dados[0]
         produtos_all_preco[prod_dados[1]] = parseFloat(prod_dados[2])
         produtos_all_quantidade[prod_dados[1]] = parseFloat(prod_dados[3])
+        produtos_all_url[prod_dados[1]] = prod_dados[4]
         if (prod_dados[1] != undefined){
           produtos.push({id: prod_dados[1], nome: prod_dados[0], preco: parseFloat(prod_dados[2]), quantidade: parseFloat(prod_dados[3]), url: prod_dados[4]})
         }
@@ -283,16 +324,24 @@
 
       combos = []
 
-      comb_card = combos_all_string.split("...")
+      comb_card = combos_all_string.split("...")  
 
       for(i in comb_card){
         comb_dados = comb_card[i].split("::")
         combos_all[comb_dados[1]] = comb_dados[0]
         combos_all_preco[comb_dados[1]] = parseFloat(comb_dados[2])
         if (comb_dados[1] != undefined){
-          combos.push({id: comb_dados[1], nome: comb_dados[0], preco: parseFloat(comb_dados[2])})
+          combos.push({id: comb_dados[1], nome: comb_dados[0], preco: parseFloat(comb_dados[2]), url: comb_dados[3], produtos: comb_dados[4], tipo_produtos: comb_dados[5]})
         }
       }
+
+      popular_produtos()
+      popular_combos()
+
+    }
+
+
+    function popular_produtos() {
 
       produtos_count = 1
       produtos_table_string = ""
@@ -322,10 +371,91 @@
 
       $("#table_produtos").html("")
       $("#table_produtos").append(produtos_table_string_total)
+
     }
 
+    function popular_combos() {
+
+      combos_count = 1
+      combos_table_string = ""
+      combos_table_string_total = ""
+
+      for (i in combos){
+        combos_table_string += 
+          "<td>"+    
+            "<div style='width: 120px; height: 180px;' onclick='add_combo("+combos[i].id+")'>"+
+              "<img src='"+server+combos[i].url+"' width='120' height='120' style='border-radius: 50%;'>"+
+              "<div style='text-align: center;'>"+combos[i].nome+"<br>R$ "+combos[i].preco+"</div>"+
+            "</div>"+
+          "</td>"
+
+        var ii = parseInt(i)+1
+        if ( ii % 4 == 0 ){
+          combos_table_string = "<tr>" + combos_table_string + "</tr>" 
+          combos_table_string_total += combos_table_string
+          combos_table_string = ""
+        }
+      }
+      if (combos_table_string != "")
+      {
+        combos_table_string_total += "<tr>" + combos_table_string + "</tr>"
+      }
 
 
+      $("#table_combos").html("")
+      $("#table_combos").append(combos_table_string_total)
+    }
+
+    function add_combo(combo_id) {
+      combo = combo_id
+      console.log(combo_id)
+      popular_combo_produtos(combo_id)
+    }
+
+    function popular_combo_produtos(combo_id) {
+      produtos_table_string = ""
+      produtos_table_string_total = ""
+      for(i in combos){
+        if (combos[i].id == combo_id){
+
+          console.log("entro")
+
+          prods = combos[i].produtos.split(",")
+
+          console.log(prods)
+
+          for (i in prods){
+            console.log(prods[i])
+            produtos_table_string += 
+              "<td>"+    
+                "<div style='width: 120px; height: 180px;' onclick='add_produto("+prods[i]+")'>"+
+                  "<img src='"+server+produtos_all_url[prods[i]]+"' width='120' height='120' style='border-radius: 50%;'>"+
+                  "<div style='text-align: center;'>"+produtos_all[prods[i]]+"<br>R$ "+produtos_all_preco[prods[i]]+"</div>"+
+                "</div>"+
+              "</td>"
+
+            var ii = parseInt(i)+1
+            if ( ii % 4 == 0 ){
+              produtos_table_string = "<tr>" + produtos_table_string + "</tr>" 
+              produtos_table_string_total += produtos_table_string
+              produtos_table_string = ""
+            }
+          }
+          if (produtos_table_string != "")
+          {
+            produtos_table_string_total += "<tr>" + produtos_table_string + "</tr>"
+          }
+
+          console.log(produtos_table_string)
+          console.log(produtos_table_string_total)
+
+          $("#table_produtos").html("")
+          console.log()
+          $("#table_produtos").append(produtos_table_string_total)
+
+        }
+      }
+    }
 
 
     function replaceAll(str, find, replace) {
@@ -358,7 +488,6 @@
     }
 
     function remover_produto_lista(produto_id) {
-      console.log("ENTRO")
       for(i in lista){
         if(lista[i].produto_id == produto_id){
           if (lista[i].quantidade > 1){
@@ -372,10 +501,8 @@
     }
 
     function mostrar_lista_compras(){
-
-      console.log("oi")
       $("#div_carrinho").show()
-      }
+    }
 
     function add_produto(produto_id) {
       console.log(produto_id)
@@ -410,9 +537,25 @@
           prod_init(data.p, data.c)
           $("#card_login").hide()
           $("#card_produtos").show()
+          $("#card_produtos_scroll").show()
+          $("#card_combos_scroll").hide()
         }
       });
+
+
+      function finalizar_compra() {
+        
+      }
+
+      $("#menu_produtos").click(function(){
+        $("#card_produtos_scroll").show()
+        $("#card_combos_scroll").hide()
+      })
       
+      $("#menu_combos").click(function(){
+        $("#card_produtos_scroll").hide()
+        $("#card_combos_scroll").show()
+      })
 
   </script>
 </body>
